@@ -29,8 +29,8 @@ const Play = () => {
         <p id = 'username_top'>@username</p>
         <video loop className = "video_player"  ref={videoRef} onClick = {Play}
         src='./media/test.mp4'></video>
-        <VideoFooter />
-        <VideoSideBar />
+        <VideoFooter channel = {'@wadewilsones'} descr = "Very descriptive description" song = {'Sexy Bomb by Merfie'}/>
+        <VideoSideBar likes = {111} comments = {250} shares = {158}/>
     </div>
   )
 }

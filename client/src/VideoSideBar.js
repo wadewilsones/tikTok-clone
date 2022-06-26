@@ -5,7 +5,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-function VideoSideBar() {
+function VideoSideBar(props) {
 
 
   const [liked, setLiked] = useState(false);
@@ -22,17 +22,17 @@ function VideoSideBar() {
           />
         }
 
-        <p>{liked? 101 : 100}</p>
+        <p>{liked? props.likes+1: props.likes}</p>
       </div>
 
       <div className = "video_side_bar_button">
         <CommentIcon fontSize = "large"/>
-        <p>250</p>
+        <p>{props.comments}</p>
       </div>
 
       <div className = "video_side_bar_button">
         <ShareIcon fontSize = "large"/>
-        <p>12</p>
+        <p>{props.shares}</p>
         </div>   
      
     </div>
