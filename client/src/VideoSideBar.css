@@ -1,0 +1,16 @@
+.video_side_bar{
+    position: absolute;
+    color:white;
+    top:55%;
+    right:10px;
+}
+
+.video_side_bar_button{
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#likedBtn{
+    color: rgb(255, 68, 0);
+}

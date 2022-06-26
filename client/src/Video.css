@@ -5,6 +5,31 @@
     scroll-snap-align: start;
 }
 
+#username_top{
+    color:white;
+    position: absolute;
+    top:60px;
+    left:20px;
+}
+
+.LogoContainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:20px;
+    left: 20px;
+}
+
+.LogoContainer h2{
+    color: white;
+    margin-left: 10px;
+}
+
+
+.logo{
+    width:30px;
+    filter: invert(1);
+}
 
 .video_player{
     object-fit: fill;
