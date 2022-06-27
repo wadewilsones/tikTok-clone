@@ -4,10 +4,10 @@ const tiktokSchema =  mongoose.Schema({
     url:String,
     channel:String,
     song:String,
-    likes:String, // number?
-    messages:String,
+    likes:Number, // number?
+    messages:Number,
     description:String,
-    shares:String  // number?
+    shares:Number  // number?
 })
 
 //Collection inside the database

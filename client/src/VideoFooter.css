@@ -1,3 +1,7 @@
+
+/*DESKTOP*/
+
+@media screen and (min-width:1000px){
 .videoFooter{
     position: relative;
     color:white;
@@ -53,3 +57,72 @@
         transform: rotate(360deg);
     }
 }
+
+}
+
+/*SMALL SCREENS*/
+
+@media screen and (max-width:999px){
+    
+    .videoFooter{
+        position: absolute;
+        color:white;
+        bottom:5%;
+        width:90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 300;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    
+    .videoFooter__text{
+        flex:1;
+    }
+    
+    
+    .videoFooter__text > p{
+        padding-bottom: 20px;
+    }
+    
+    .videoFooter__text > h3{
+        padding-bottom: 10px;
+    }
+    
+    .Footer_icon{
+        position: absolute;
+        margin-right: 20px;
+    }
+    
+    .footer_ticker > .ticker{
+        height: fit-content;
+        margin-left: 30px;
+        width: 60%;
+    }
+    
+    .footer_ticker h1{
+        padding-top: 7px;
+    }
+    
+    .footer_record{
+        animation: spintheRecord 5s infinite linear;
+        height: 48px;
+        filter: invert(2);
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+    }
+    
+    @keyframes spintheRecord {
+        from {
+            transform: rotate(0deg);
+        }
+    
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    
+    }

@@ -3,7 +3,7 @@ import VideoFooter from './VideoFooter';
 import VideoSideBar from './VideoSideBar';
 import "./Video.css"
 
-function Video() {
+function Video(props) {
 
 const [playing, setPlaying] = useState(false) 
 const videoRef = useRef(null); 
@@ -18,19 +18,18 @@ const Play = () => {
         videoRef.current.play();
         setPlaying(true)
     }
-    //when stop play it
+
 }
   return (
     <div className='video'>
-        <div className = "LogoContainer">
+      <div className = "LogoContainer">
           <img src='./media/favicon.png' className='logo'></img> 
           <h2>TikTok</h2>
         </div>
-        <p id = 'username_top'>@username</p>
-        <video loop className = "video_player"  ref={videoRef} onClick = {Play}
-        src='./media/test.mp4'></video>
-        <VideoFooter channel = {'@wadewilsones'} descr = "Very descriptive description" song = {'Sexy Bomb by Merfie'}/>
-        <VideoSideBar likes = {111} comments = {250} shares = {158}/>
+        <p id = 'username_top'>{props.channel}</p>
+        <video loop className = "video_player"  ref={videoRef} onClick = {Play} src={props.url}></video>
+        <VideoFooter channel = {props.channel} descr = {props.description} song = {props.song}/>
+        <VideoSideBar likes = {props.likes} comments = {props.messages} shares = {props.shares}/>
     </div>
   )
 }

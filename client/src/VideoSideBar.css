@@ -1,3 +1,5 @@
+@media screen and (min-width:1000px){
+
 .video_side_bar{
     position: absolute;
     color:white;
@@ -14,3 +16,26 @@
 #likedBtn{
     color: rgb(255, 68, 0);
 }
+
+}
+
+@media screen and (max-width:999px){
+
+    .video_side_bar{
+        position: absolute;
+        color:white;
+        top:40%;
+        right:5px;
+    }
+    
+    .video_side_bar_button{
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    #likedBtn{
+        color: rgb(255, 68, 0);
+    }
+    
+    }

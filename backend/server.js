@@ -2,23 +2,19 @@ import express from "express";
 import mongoose from "mongoose";
 import 'dotenv/config';
 import tikTokVideo from './dbModel.js';
+import cors from 'cors'
 
 //import dummy data
 import Data from "./data.js";
 
 // app config
 const app = express();
-const port = 9000;
+const port =  process.env.PORT || 9000;
 
 //Midlewares
 
 app.use(express.json()); // allows to post and get json response
-app.use((req, res, next) => {
-    res.setHeaders('Access-Control-Allow-Origin','*'),
-    res.setHeaders('Access-Control-Allow-Origin','*'),
-    next()
-}) //cors headers, dont't do in productions
-
+app.use(cors())
 //DB config
 
 const dbURL = process.env.DB; 
